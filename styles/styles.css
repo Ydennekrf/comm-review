@@ -7,6 +7,7 @@ body {
     color: #fff;
     line-height: 20px;
     width: 100%;
+    background-color: #8ab19b6b;
 }
 
 .header {
@@ -30,12 +31,12 @@ body {
 .two-col-side {
     display: grid;
     gap: 5px;
-    grid-template-columns: 1fr 250px;
+    grid-template-columns: 1fr 1fr;
 }
 
 .hero-rate {
     
-    margin: 80px 0px 0px 20px;
+    /* margin: 80px 0px 0px 20px; */
     width: 10em;
     height: 10em;
     background-color: #f1d469;
@@ -63,7 +64,7 @@ body {
 
 .sidebar {
     display: grid;
-    grid-template-rows: 1fr 1fr;
+    grid-template-rows: 1fr;
     color: #2B1512;
     padding: 5px;
     background-color: #b7cece;
@@ -79,6 +80,7 @@ body {
     grid-template-columns: 15% 1fr 1fr;
     margin: 5px;
     box-shadow: 1px 1px 1px 1px #212b2a;
+    margin-left: 5%;
     
 }
 
@@ -102,21 +104,18 @@ body {
 }
 
 .performance {
-    width: 98%;
+    width: 100%;
     display: grid;
     gap: 5px;
     grid-template-columns: 110px 1fr;
+    background-color: #979ba7;
 }
 .performance h3 {
     text-align: center;
 }
 .performance p {
-    
-    background-color:#747986;
     padding: 10px;
     margin-right: 5px;
-    border-radius: 15px;
-    box-shadow: 3px 3px 3px 3px #74a8a782;
 }
 
 .performance img, .customization img {
@@ -126,29 +125,30 @@ body {
 }
 
 .pricing {
-    width: 98%;
+    width: 100%;
     display: grid;
     gap: 5px;
     grid-template-columns:  1fr 200px;
+    margin-top: 20px;
+    margin-bottom: 40px;
 }
 
 .pricing p {
-    
-    background-color:#747986;
-    box-shadow: 3px 3px 3px 3px #74a8a782;
     padding: 10px;
     margin: 20px 5px 5px 5px;
-    /* border: 1px solid #2B1512; */
-    border-radius: 15px;
 }
 .pricing h3 {
     text-align: center;
-    margin: 0 0 0 20px;
+    margin: 0;
 }
 
 .three-row {
     display: grid;
     grid-template-rows: 1fr 1fr 1fr;
+}
+.small-two-row {
+    display: grid;
+    grid-template-rows: 30px 1fr;
 }
 .customization {
     width: 98%;
@@ -156,30 +156,19 @@ body {
     gap: 5px;
     grid-template-columns: 110px 1fr;
 }
-.customization p {
-    
-    background-color:#747986;
-    
+.customization p { 
     padding: 10px;
     margin: 20px 5px 5px 5px;
-    /* border: 1px solid #2B1512; */
-    border-radius: 15px;
 }
 
 .conclusions {
     padding-bottom: 30px;
     margin-left:30px;
-    margin-top: 10px;
+    margin-top: 20px;
 }
 .conclusions p {
-    
-    background-color:#747986;
     padding: 10px;
     margin: 20px 5px 5px 5px;
-    /* border: 1px solid #2B1512; */
-    border-radius: 15px;
-    width: 90%;
-    box-shadow: 3px 3px 3px 3px #74a8a782;
 }
 .conclusions h3 {
     margin: 0;
@@ -193,8 +182,25 @@ body {
     margin-top: 20px;
 }
 
+.table-rate {
+    display: grid;
+    grid-template-columns: 1fr 4fr 1fr;
+    grid-template-rows: 0px 256px 50px 10px;
+}
+.cite {
+    width: 100%;
+    font-size: 8px;
+    line-height: 8px;
+    font-weight: 200;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+.cite p {
+    padding: 0;
+    margin: 0;
+}
+
 .tbl-procon {
-    background-color: #979ba7;
     height: fit-content;
     padding: 10px;
     border-radius: 15px;
@@ -228,7 +234,6 @@ body {
 
 table {
     width: 10px;
-    margin: 40px 0px 0px 0px;
     border-collapse: collapse;
     font-size: 80%;
 }
@@ -266,6 +271,32 @@ footer a {
 }
 
 @media screen and (min-width: 768px) {
+    body {
+        font-size: 110%;
+    }
+    .performance {
+        background-color: #b7cece;
+    }
+    .pricing {
+       height: 45vh; 
+    }
+    .cite {
+        position: relative;
+        top: 20px;
+        right: 210px;
+        min-width: 400px;
+        font-size: 9px;
+        line-height: 10px;
+    }
+    .pro-con {
+        grid-template-columns: 1fr 5fr 1fr;
+    }
+    .sidebar {
+        background-color: #979ba7;
+        grid-template-rows: 1fr 1fr;
+        border-right: 2px solid #66686e;
+        box-shadow: 0px 5px 20px inset #66686e;
+    }
     .two-col-main {
         display: grid;
         grid-template-columns: 250px 1fr;
@@ -274,19 +305,41 @@ footer a {
         display: block;
     }
     .rate-table {
-        margin-left: 20px;
+        margin-left: 53px;
     }
     .hero-rate {
         margin: 20px 0 0 40px;
+    }
+    footer {
+        padding-top: 15px;
+        height: 6vh;
     }
 }
 
 
 
 @media screen and (min-width: 1024px) {
+    body {
+        font-size: 120%;
+    }
+    footer {
+        padding-top: 20px;
+    }
+    .three-row {
+        display: block;
+    }
     .two-col {
         display: grid;
         grid-template-columns: 1fr 1fr;
+    }
+
+    .pricing table {
+        margin-left: 120px;
+    }
+
+    .cite {
+        line-height: 13px;
+        right: 10px;
     }
 
     .performance img, .customization img {
@@ -294,9 +347,11 @@ footer a {
         margin: 100px 0px 0px 100px;
         border-radius: 5px;
     }
-    .pricing table {
-        margin-left: 60px;
+
+    .hero-rate {
+        margin-left: 25px;
     }
+    
 }
 
 @media screen and (min-width: 1440px) {
